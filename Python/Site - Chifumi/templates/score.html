@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Score</title>
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/styles.css') }}">
+</head>
+<body>
+<h1>Tableaux des Score :</h1>
+<!--On affiche le tableau des scores avec l'id, le nom et donc le score des joueurs, le tout dans un ordre décroissant en fonction du score.-->
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Score</th>
+    </thead>
+
+    {% for joueur in joueurs %}
+    <tbody>
+        <td>{{ joueur.id }}</td>
+        <td>{{ joueur.name }}</td>
+        <td>{{ joueur.score }}</td>
+    </tbody>
+    {% endfor %}
+</table>
+<!--Le boutton qui nous redirige vers l'accueil.-->
+<a href="http://127.0.0.1:5000/"><button class="back-index">Retour à l'Accueil</button></a>
+</body>
+</html>

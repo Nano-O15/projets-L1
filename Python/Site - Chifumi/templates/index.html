@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/styles.css') }}">
+</head>
+<body>
+<h1>Règles du Chifoumi (Pierre/Papier/Ciseaux)</h1>
+<p>Le joueur doit rentrer son choix de mouvement entre "Pierre", "Papier" et "Ciseaux".</br>
+    L'IA va aussi faire un choix de mouvement (aléatoire) et en fonction du duel obtenu, on a soit une victoire, soit un match nul, soit une défaite.</br>
+    Pour les duels, la Pierre bat les Ciseaux, les Ciseaux battent le Papier et le Papier bat la Pierre.</br>
+</p>
+
+<h1>Inscription</h1>
+<p>Pour vous inscrire, veuillez remplir le formulaire suivant :</p>
+<!--On créer le formulaire d'inscription pour les joueurs-->
+<form action="/signup" method="POST">
+    <input type="text" name="name" placeholder="Entrez votre nom."></br>
+    <input type="password" name="password" placeholder="Entrez un mot de passe."></br>
+    <input type="email" name="mail" placeholder="Entrez votre e-mail."></br>
+    <input type="submit" value="Inscription">
+</form>
+<h1>Connexion</h1>
+<p>Veuillez vous connecter :</p>
+<!--On créer le formulaire de connexion pour les joueurs-->
+<form action="/signin" method="POST" style="display: inline-grid;">
+    <input type="text" name="name" placeholder="Nom d'Utilisateur">
+    <input type="password" name="password" placeholder="Mot de Passe">
+    <input type="submit" value="Se Connecter">
+</form>
+</body>
+</html>
